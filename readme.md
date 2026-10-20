@@ -4,7 +4,7 @@ This repository contains a MATLAB-based numerical optimization project focused o
 
 The algorithms are tested on standard benchmark functions scaled up to high dimensions ($n = 100,000$).
 
-## 📌 Features
+## Features
 * **Optimization Algorithms**: 
   * Modified Newton Method (with Backtracking Line Search).
   * Truncated Newton Method (using Conjugate Gradient to solve the Newton system).
@@ -18,7 +18,7 @@ The algorithms are tested on standard benchmark functions scaled up to high dime
 * **Finite Difference Modes**: Evaluates both `fixed` ($h = 10^{-k}$) and `adaptive` step sizes, with $k \in \{4, 8, 12\}$.
 * **Performance Tracking**: Automatically calculates the experimental Rate of Convergence (ROC) and tracks computational times.
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```text
 ├── data/                   # Automatically generated .mat files containing function/derivative handles
@@ -42,7 +42,7 @@ The algorithms are tested on standard benchmark functions scaled up to high dime
 └── report.pdf              # Report and analysis of the project
 ```
 
-## 🚀 How to Run
+## How to Run
 
 1. Clone the repository and open MATLAB.
 2. Navigate to the root directory of the repository.
@@ -51,7 +51,7 @@ The algorithms are tested on standard benchmark functions scaled up to high dime
 5. The script will automatically add the necessary folders to your MATLAB path, execute the optimization routines across multiple random starting points, and print the results to the console.
 6. A log file named `risultati.txt` will be generated in the root directory containing iterations, gradient norms, ROC, and timing reports.
 
-## 📊 Experimental Details & Results
+## Experimental Details & Results
 
 The main script tests the algorithms across random starting points inside a defined bounding box. For each point, it runs a combination of:
 * Method: Modified Newton vs Truncated Newton
@@ -63,5 +63,5 @@ The main script tests the algorithms across random starting points inside a defi
 * **Approximations:** Using fully approximated derivatives (Approx 2) on highly non-linear functions (like Chained Freudenstein) at large scales often leads to stagnation, requiring rescue strategies (like Steepest Descent resets).
 * **Rate of Convergence (ROC):** Exact derivatives generally preserve quadratic/superlinear convergence, while approximations heavily depend on the choice of the finite difference step size $k$.
 
-## 🛠 Prerequisites
+## Prerequisites
 * **MATLAB** (Tested on R2022b or newer). No specialized toolboxes are strictly required, as the core optimization routines and finite difference methods are implemented from scratch.
